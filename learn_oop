@@ -1,1 +1,28 @@
-console.log("hello");
+class Animal{
+    contructor(name){
+        this.name=name;
+    }
+    speak(){
+        return `Animal is speaking`;
+    }
+}
+class Dog extends Animal{
+    constructor(name){
+        super(name);
+    }
+    speak(){
+        return `Dog is speaking: Gâu gâu`;
+    }
+}
+class Cat extends Animal{
+    constructor(name){
+        super(name);
+    }
+    speak(){
+        return `Cat is calling: Meo meo`;
+    }
+}
+const dog= new Dog();
+const cat= new Cat();
+console.log(dog.speak());
+console.log(cat.speak());
