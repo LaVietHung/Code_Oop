@@ -1,0 +1,28 @@
+class animal{
+    constructor(name){
+        this.name=name;
+    }
+    speak(){
+        return `Animal is speaking`;
+    }
+}
+class Dog extends animal{
+    constructor(name){
+    super(name);
+    }
+    speak(){
+        return `Dog is barking: Gâu gâu`;
+    }
+}
+class Cat extends animal{
+    constructor(name){
+        super(name);
+    }
+    speak(){
+        return `Cat is calling: Meo meo`;
+    }
+}
+const dog= new Dog();
+const cat= new Cat();
+console.log(dog.speak());
+console.log(cat.speak());
