@@ -1,23 +1,17 @@
-class Calculator{
-    constructor(){
-        this.value=0;
+class Human{
+    constructor(name,age,sex){
+        this.name=name;
+        this.age=age;
+        this.sex=sex;
     }
-    plus(number){
-        this.value+=number;
-        return this;
+    speak(){
+        console.log(`bạn này tên là:${this.name}, ${this.age} tuổi, giới tính:${this.sex}`);
+    }
 
-    }
-    subtract(number){
-        this.value-=number;
-        return this;
-    }
-    multiply(number){
-        this.value*=number;
-        return this;
-    }
-    getResult(){
-        return this.value;
-    }
 }
-const result= new Calculator().plus(5).subtract(2).multiply(3).getResult()
-console.log(result);
+const Hung= new Human('Hùng',18, 'nam');
+const Quan= new Human('Quân',22, 'nam');
+const Anh= new Human('Anh',4, 'nữ');
+Hung.speak();
+Quan.speak();
+Anh.speak();
